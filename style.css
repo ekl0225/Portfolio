@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Primary colors */
+  --preset-primary-pine-tree: #2b2b1b;
+  --preset-primary-burnished-brown: #a88176;
+  --preset-primary-tumble-weed: #d79b87;
+  --preset-primary-dust-storm: #edcfbe;
+  --preset-primary-silver-pink: #cdb4b2;
+
+  /* Secondary colors */
+  --preset-secondary-floral-white: #faf7ef;
+  --preset-secondary-black-olive: #32372c;
+  --preset-secondary-carbon-black: #121314;
+
+  /* Font family */
+  --preset-font-instrument-serif: "Instrument Serif", serif;
+  --preset-font-italianno: "Italianno", cursive;
+  --preset-font-montserrat: "Montserrat", sans-serif;
+  --preset-font-mea-culpa: "Mea Culpa", cursive;
+}
+body {
+  background-color: var(--preset-primary-pine-tree);
+}
+header {
+  background-color: var(--preset-primary-burnished-brown);
+  padding: 20px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+a {
+  color: var(--preset-secondary-floral-white);
+  font-family: var(--preset-font-montserrat);
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--preset-secondary-black-olive);
+  text-decoration: underline;
+}
+#InstrumentSerif {
+  font-family: var(--preset-font-instrument-serif);
+}
+.Meaculpa {
+  font-family: var(--preset-font-mea-culpa);
+  font-weight: 100;
+}
+.intro {
+  font-weight: 100;
+}
