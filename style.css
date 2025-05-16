@@ -25,6 +25,8 @@
 body {
   background-color: var(--preset-primary-pine-tree);
 }
+
+/* ---------------Header with navbar------------------- */
 header {
   background-color: var(--preset-primary-burnished-brown);
   padding: 20px;
@@ -44,13 +46,56 @@ a:hover {
   color: var(--preset-secondary-black-olive);
   text-decoration: underline;
 }
-#InstrumentSerif {
+/* -------------------------------------- */
+/* ----------Font Display------------- */
+.fonts {
+  color: var(--preset-primary-dust-storm);
+}
+#Instrumentserif {
   font-family: var(--preset-font-instrument-serif);
+  font-size: 40px;
 }
-.Meaculpa {
+#Italianno {
+  font-family: var(--preset-font-italianno);
+  font-size: 40px;
+}
+/* ----------------------------------- */
+/* ---------------Intro text------------ */
+#Meaculpa {
   font-family: var(--preset-font-mea-culpa);
-  font-weight: 100;
+  font-size: 25px;
 }
-.intro {
-  font-weight: 100;
+.introtext {
+  color: var(--preset-secondary-floral-white);
+  font-family: var(--preset-font-montserrat);
+  font-weight: 200;
+}
+
+/* --------------color palettes---------- */
+
+.colorpalette {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.primary {
+  width: 70px;
+  height: 30px;
+}
+#primarycolors {
+}
+#pinetree {
+  background-color: var(--preset-primary-pine-tree);
+}
+#burnishedbrown {
+  background-color: var(--preset-primary-burnished-brown);
+}
+#tumbleweed {
+  background-color: var(--preset-primary-tumble-weed);
+}
+#duststorm {
+  background-color: var(--preset-primary-dust-storm);
+}
+#silverpink {
+  background-color: var(--preset-primary-silver-pink);
 }
