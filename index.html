@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,16 +16,16 @@
   <body>
     <header>
       <div class="navbar">
-        <a href="#hero">
+        <a href="index.html">
           <p>Home</p>
         </a>
-        <a href="#aboutme">
+        <a href="aboutme.html">
           <p>About Me</p>
         </a>
-        <a href="#projects">
+        <a href="projects.html">
           <p>Projects</p>
         </a>
-        <a href="#contact">
+        <a href="contact.html">
           <p>Contact</p>
         </a>
       </div>
@@ -55,18 +55,13 @@
         />
 
         <div class="introtext">
-          <p>
+          <p id="hero-typewriter">
             Hei, jeg heter <span id="Meaculpa">E</span>milia og er frontend
-            utvikler og designentusiast
-          </p>
-        </div>
-
-        <div class="introtext">
-          <p>
+            utvikler og designentusiast🎨.<br />
             Jeg elsker å skape digitale løsninger som både ser bra ut og
-            fungerer sømløst. <br />
+            fungerer sømløst.<br />
             Gjennom kreativ koding og godt design bringer jeg ideer til <br />
-            live i nettleseren
+            live i nettleseren.
           </p>
         </div>
       </div>
@@ -76,30 +71,41 @@
         <div id="primarycolors">
           <div id="title">
             <p>Primary colors</p>
+            <p class="help-text">Klikk på en farge for å kopiere hex-koden</p>
           </div>
           <div class="colors">
             <div class="color-item">
-              <div class="primary" id="pinetree"></div>
+              <div class="color-box primary" data-hex="#2B2B1B">
+                <span class="copy-label">Copy</span>
+              </div>
               <p>#2B2B1B</p>
               <p>Pine Tree</p>
             </div>
             <div class="color-item">
-              <div class="primary" id="burnishedbrown"></div>
+              <div class="color-box primary" data-hex="#A88176">
+                <span class="copy-label">Copy</span>
+              </div>
               <p>#A88176</p>
               <p>Burnished Brown</p>
             </div>
             <div class="color-item">
-              <div class="primary" id="tumbleweed"></div>
+              <div class="color-box primary" data-hex="#D79B87">
+                <span class="copy-label">Copy</span>
+              </div>
               <p>#D79B87</p>
               <p>Tumbleweed</p>
             </div>
             <div class="color-item">
-              <div class="primary" id="duststorm"></div>
+              <div class="color-box primary" data-hex="#EDCFBE">
+                <span class="copy-label">Copy</span>
+              </div>
               <p>#EDCFBE</p>
               <p>Dust Storm</p>
             </div>
             <div class="color-item">
-              <div class="primary" id="silverpink"></div>
+              <div class="color-box primary" data-hex="#CDB4B2">
+                <span class="copy-label">Copy</span>
+              </div>
               <p>#CDB4B2</p>
               <p>Silver Pink</p>
             </div>
@@ -113,17 +119,23 @@
           </div>
           <div class="colors">
             <div class="color-item">
-              <div class="secondary" id="floralwhite"></div>
+              <div class="color-box secondary" data-hex="#FAF7EF">
+                <span class="copy-label">Copy</span>
+              </div>
               <p>#FAF7EF</p>
               <p>Floral White</p>
             </div>
             <div class="color-item">
-              <div class="secondary" id="blackolive"></div>
+              <div class="color-box secondary" data-hex="#32372C">
+                <span class="copy-label">Copy</span>
+              </div>
               <p>#32372C</p>
               <p>Black Olive</p>
             </div>
             <div class="color-item">
-              <div class="secondary" id="carbonblack"></div>
+              <div class="color-box secondary" data-hex="#121314">
+                <span class="copy-label">Copy</span>
+              </div>
               <p>#121314</p>
               <p>Carbon Black</p>
             </div>

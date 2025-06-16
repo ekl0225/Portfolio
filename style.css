@@ -152,6 +152,9 @@ a:hover {
 #Meaculpa {
   font-family: var(--preset-font-mea-culpa);
   font-size: 25px;
+  color: var(--preset-secondary-floral-white);
+  text-shadow: 0 0 5px #f0c7b8, 0 0 10px #f0c7b8, 0 0 20px #f0c7b8,
+    0 0 40px #f0c7b8;
 }
 
 /* -------------- Color palette section ------------------- */
@@ -171,7 +174,7 @@ a:hover {
   bottom: 0;
   left: 0;
   opacity: 0.6;
-  transform: rotate(-15deg) scaleX(-1); /* Hvis du vil rotere bildet */
+  transform: rotate(-15deg) scaleX(-1);
   pointer-events: none; /* Forhindrer at bildet påvirker interaksjoner med andre elementer */
   z-index: 0;
 }
@@ -188,6 +191,15 @@ a:hover {
   margin-bottom: 10px;
   text-align: center;
 }
+.help-text {
+  font-size: 0.85rem;
+  color: var(--preset-primary-dust-storm);
+  margin-top: -5px;
+  margin-bottom: 12px;
+  opacity: 0.8;
+  font-family: var(--preset-font-montserrat);
+}
+
 #primarycolors {
   position: relative;
   z-index: 1;
@@ -200,18 +212,6 @@ a:hover {
   flex-direction: column; /* Fargene vises vertikalt i hver seksjon */
   align-items: center;
   justify-content: flex-start; /* Fargene stables fra toppen */
-}
-
-.colors {
-  display: flex;
-  gap: 10px; /* Litt mellomrom mellom fargene */
-  justify-content: center; /* Fargene vises på en linje */
-}
-
-.primary,
-.secondary {
-  width: 80px;
-  height: 40px;
 }
 
 /* ---------------Color Definitions ----------------*/
@@ -261,4 +261,107 @@ a:hover {
   display: flex;
   gap: 20px;
   justify-content: center;
+}
+
+.primary,
+.secondary {
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.primary:hover,
+.secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Denne brukes til tekst som "Copy" */
+.copy-text {
+  font-size: 0.9rem;
+  color: var(--preset-secondary-floral-white);
+  margin-top: 6px;
+}
+
+/* Fargeboks uten border-radius og med riktig tekstfarge */
+.color-box {
+  width: 80px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--preset-secondary-floral-white);
+  border-radius: 0;
+  z-index: 1;
+  transition: background-color 0.2s ease;
+}
+
+/* Tekst som vises ved hover */
+.copy-label {
+  opacity: 0;
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.color-box:hover .copy-label {
+  opacity: 1;
+}
+
+/* Hover-effekt uten å endre tekstfarge */
+.color-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.2s ease;
+  z-index: 0;
+}
+
+.color-box:hover::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* fade in */
+body {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+body.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* typewriter */
+#hero-typewriter {
+  position: relative;
+  white-space: pre-wrap; /* for linjeskift */
+}
+
+#hero-typewriter::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  margin-left: 2px;
+  animation: blink 1s steps(2, start) infinite;
+  font-weight: bold;
+  color: var(--preset-primary-dust-storm);
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
 }
