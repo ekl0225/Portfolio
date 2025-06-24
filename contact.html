@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="main.js"></script>
+    <script src="burgermenu.js" defer></script>
+    <link rel="stylesheet" href="burgermenu.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,22 +16,19 @@
     />
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <a href="index.html">
-          <p>Home</p>
-        </a>
-        <a href="aboutme.html">
-          <p>About Me</p>
-        </a>
-        <a href="projects.html">
-          <p>Projects</p>
-        </a>
-        <a href="contact.html">
-          <p>Contact</p>
-        </a>
-      </div>
-    </header>
+    <!-- Burger-ikon -->
+    <div id="burger-menu">
+      <span></span>
+    </div>
+
+    <!-- Navigasjonsmeny -->
+    <nav id="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
     <main><p>contact</p></main>
   </body>
 </html>

@@ -6,6 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script type="module" src="main.js"></script>
+    <script src="burgermenu.js" defer></script>
+    <link rel="stylesheet" href="burgermenu.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,23 +16,38 @@
     />
   </head>
   <body>
-    <header>
-      <div class="navbar">
-        <a href="index.html">
-          <p>Home</p>
-        </a>
-        <a href="aboutme.html">
-          <p>About Me</p>
-        </a>
-        <a href="projects.html">
-          <p>Projects</p>
-        </a>
-        <a href="contact.html">
-          <p>Contact</p>
-        </a>
-      </div>
-    </header>
+    <!-- Burger-ikon -->
+    <div id="burger-menu">
+      <span></span>
+    </div>
+
+    <!-- Navigasjonsmeny -->
+    <nav id="menu">
+      <ul>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
     <div class="hero">
+      <div class="intro">
+        <img
+          id="white-flowers"
+          src="images/white-flowers-no-back.png"
+          alt="white flowers"
+        />
+        <div class="introtext">
+          <p id="hero-typewriter">
+            Hei, jeg heter <span id="Meaculpa">E</span>milia og er frontend
+            utvikler og designentusiast🎨.<br />
+            Jeg elsker å skape digitale løsninger som både ser bra ut og
+            fungerer sømløst.<br />
+            Gjennom kreativ koding og godt design bringer jeg ideer til <br />
+            live i nettleseren.
+          </p>
+        </div>
+      </div>
+
       <div class="fonts">
         <div class="normaltext">
           <p>Font-1</p>
@@ -45,24 +62,6 @@
             <p>Lorem Ipsum</p>
           </div>
           <p>Italianno</p>
-        </div>
-      </div>
-      <div class="intro">
-        <img
-          id="white-flowers"
-          src="images/white-flowers-no-back.png"
-          alt="white flowers"
-        />
-
-        <div class="introtext">
-          <p id="hero-typewriter">
-            Hei, jeg heter <span id="Meaculpa">E</span>milia og er frontend
-            utvikler og designentusiast🎨.<br />
-            Jeg elsker å skape digitale løsninger som både ser bra ut og
-            fungerer sømløst.<br />
-            Gjennom kreativ koding og godt design bringer jeg ideer til <br />
-            live i nettleseren.
-          </p>
         </div>
       </div>
 
